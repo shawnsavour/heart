@@ -75,6 +75,7 @@
     console.log(name);
     document.getElementById('name-of-crush').innerText = name !== 'null' ? name : 'a Quangtp';
     // rewrite url remove param
+    window.history.replaceState({}, document.title, "/" + "heart");
 /*
  * Settings
  */
