@@ -76,11 +76,11 @@
 
  var settings = {
     particles: {
-      length: 1500, // maximum amount of particles
-      duration: 3, // particle duration in sec
+      length: 1000, // maximum amount of particles
+      duration: 3.5, // particle duration in sec
       velocity: 70, // particle velocity in pixels/sec
-      effect: -0.9, // play with this for a nice effect
-      size: 10 // particle size in pixels
+      effect: -0.7, // play with this for a nice effect
+      size: 30 // particle size in pixels
     }
   };
   /*
@@ -269,8 +269,8 @@
           settings.particles.size / 2 - (point.y * settings.particles.size) / 350;
         return point;
       }
-      // create the path
-      context.beginPath();
+    //   // create the path
+    //   context.beginPath();
       var t = -Math.PI;
       var point = to(t);
       context.moveTo(point.x, point.y);
@@ -283,6 +283,79 @@
       // create the fill
       context.fillStyle = "#ff007b";
       context.fill();
+
+    //   let middle = to(t);
+    //   context.fillStyle = "#fff";
+    //     context.beginPath();
+    //     context.ellipse(middle.x, middle.y, 200, 150, 0, 0, Math.PI * 2);
+    //     context.fill();
+        
+    //     context.beginPath();
+    //     context.ellipse(middle.x - 120, middle.y - 100, 50, 100, Math.PI * 5/6, 0, Math.PI * 2);
+    //     context.fill();
+    //     context.beginPath();
+    //     context.ellipse(middle.x + 120, middle.y - 100, 50, 100, Math.PI * 1/6, 0, Math.PI * 2);
+    //     context.fill();
+        
+    //     context.beginPath();
+    //     context.moveTo(middle.x + 180, middle.y + 5);
+    //     context.arcTo(middle.x + 225, middle.y, middle.x + 250, middle.y + 55, 50);
+    //     context.arcTo(middle.x + 225, middle.y, middle.x + 180, middle.y + 10, 50);
+    //     context.closePath();
+    //     context.fill();
+    //     context.beginPath();
+    //     context.moveTo(middle.x + 180, middle.y + 20);
+    //     context.arcTo(middle.x + 225, middle.y, middle.x + 250, middle.y + 75, 50);
+    //     context.arcTo(middle.x + 225, middle.y, middle.x + 180, middle.y + 25, 50);
+    //     context.closePath();
+    //     context.fill();
+    //     context.beginPath();
+    //     context.moveTo(middle.x + 170, middle.y + 30);
+    //     context.arcTo(middle.x + 215, middle.y, middle.x + 240, middle.y + 85, 50);
+    //     context.arcTo(middle.x + 215, middle.y, middle.x + 170, middle.y + 35, 50);
+    //     context.closePath();
+    //     context.fill();
+        
+    //     context.beginPath();
+    //     context.moveTo(middle.x - 180, middle.y + 5);
+    //     context.arcTo(middle.x - 225, middle.y, middle.x - 250, middle.y + 55, 50);
+    //     context.arcTo(middle.x - 225, middle.y, middle.x - 180, middle.y + 10, 50);
+    //     context.closePath();
+    //     context.fill();
+    //     context.beginPath();
+    //     context.moveTo(middle.x - 180, middle.y + 20);
+    //     context.arcTo(middle.x - 225, middle.y, middle.x - 250, middle.y + 75, 50);
+    //     context.arcTo(middle.x - 225, middle.y, middle.x - 180, middle.y + 25, 50);
+    //     context.closePath();
+    //     context.fill();
+    //     context.beginPath();
+    //     context.moveTo(middle.x - 170, middle.y + 30);
+    //     context.arcTo(middle.x - 215, middle.y, middle.x - 240, middle.y + 85, 50);
+    //     context.arcTo(middle.x - 215, middle.y, middle.x - 170, middle.y + 35, 50);
+    //     context.closePath();
+    //     context.fill();
+        
+    //     context.fillStyle = "#000";
+    //     context.beginPath();
+    //     context.ellipse(middle.x - 80, middle.y - 50, 40, 50, 0, 0, Math.PI * 2);
+    //     context.fill();
+    //     context.fillStyle = "#fff";
+    //     context.beginPath();
+    //     context.ellipse(middle.x - 80, middle.y, 30, 80, 0, 0, Math.PI*2);
+    //     context.fill();
+        
+    //     context.fillStyle = "#000";
+    //     context.beginPath();
+    //     context.ellipse(middle.x + 80, middle.y - 50, 40, 50, 0, 0, Math.PI * 2);
+    //     context.fill();
+    //     context.fillStyle = "#fff";
+    //     context.beginPath();
+    //     context.ellipse(middle.x + 80, middle.y, 30, 80, 0, 0, Math.PI*2);
+    //     context.fill();
+
+
+
+
       // create the image
       var image = new Image();
       image.src = canvas.toDataURL();
