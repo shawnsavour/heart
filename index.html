@@ -66,10 +66,13 @@
 <body>
   <div class="container">
     <canvas id="pinkboard"></canvas>
-    <div class="name-of-crush"> a Quangtp </div>
+    <div id="name-of-crush" class="name-of-crush"> a Quangtp </div>
   </div>
   <script>
-
+    //  change #name-of-crush innerHtml to value
+    // get value of parameter 'name' from current url
+    name = new URLSearchParams(window.location.search).get('name');
+    document.getElementById('name-of-crush').innerText = name == null ? name : 'a Quangtp';
 /*
  * Settings
  */
@@ -400,6 +403,9 @@
     }, 10);
   })(document.getElementById("pinkboard"));
   
+  
+
+
   </script>
 </body>
 
