@@ -72,7 +72,7 @@
     //  change #name-of-crush innerHtml to value
     // get value of parameter 'name' from current url
     name = new URLSearchParams(window.location.search).get('name');
-    document.getElementById('name-of-crush').innerText = name == null ? name : 'a Quangtp';
+    document.getElementById('name-of-crush').innerText = name !== null ? name : 'a Quangtp';
 /*
  * Settings
  */
