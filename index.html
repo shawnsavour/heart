@@ -72,10 +72,9 @@
     //  change #name-of-crush innerHtml to value
     // get value of parameter 'name' from current url
     name = new URLSearchParams(window.location.search).get('name');
-    console.log(name);
     document.getElementById('name-of-crush').innerText = name !== 'null' ? name : 'chỉ iu mình em';
     // rewrite url remove param
-    window.history.replaceState({}, document.title, "/" + "heart");
+    window.history.replaceState({}, document.title, window.location.pathname);
 /*
  * Settings
  */
